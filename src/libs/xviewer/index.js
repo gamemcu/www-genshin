@@ -1,0 +1,1 @@
+export * from './xviewer.module.min';

@@ -1,0 +1,100 @@
+.progress-container {
+    // z-index: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #fff;
+    // border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    background-size: 2vmin, 1vmin;
+    transition: opacity 1.5s ease 1s;
+
+    .progress-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    .Genshin {
+        width: 45vmin;
+        height: 35vmin;
+        margin-bottom: 5vmin;
+
+        transition: opacity 1s ease 1.2s;
+    }
+
+    .LoadingBar {
+        width: 40vmin;
+        height: 1.2vmin;
+        border-radius: 0.7vmin;
+
+        transition: opacity 1s ease 1.2s;
+        // box-shadow: 0 0 13px rgba(0, 0, 0, 0.5);
+        .ball{
+            z-index: auto;
+            top: -1.2vmin;
+            width: 1.2vmin;
+            height: 1.2vmin;
+            position: relative;
+            background-color: rgb(48, 48, 48);
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+
+        .progress-bar {
+            width: 41vmin;
+            margin-left: -0.5vmin;
+            height: 100%;
+    
+            background-color: rgb(194, 194, 194);
+            clip-path: polygon(0.5vmin 0, 40.5vmin 0, 100% 50%, 40.5vmin 100%, 0.5vmin 100%, 0 50%);
+    
+            .progress {
+                width: 50%;
+                height: 100%;
+                background-color: rgb(48, 48, 48);
+                // transition: width 0.5s ease;
+            }
+        }
+    }
+
+    
+}
+
+.bird {
+    float: right;
+    position: relative;
+    top: -32px;
+    right: -20px;
+}
+
+#front_wings {
+    transform-origin: bottom;
+    animation: flap 1s linear infinite alternate;
+}
+
+#back_wings {
+    transform-origin: bottom;
+    animation: flap 1s linear infinite alternate;
+}
+
+@keyframes flap {
+    50% {
+        transform: scaleY(0.3)
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

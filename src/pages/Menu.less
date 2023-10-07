@@ -1,0 +1,155 @@
+.menu-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    pointer-events: none;
+
+    .menu-12 {
+        padding: 0% 0%;
+        margin: 0% 0%;
+        height: 14vmin;
+        width: 14vmin;
+        top: 6vmin;
+        right: 4%;
+        background-image: url("/Genshin/Tex_0096.png");
+        background-size: 100% 100%;
+        position: absolute;
+        transition: opacity 1s ease;
+    }
+
+    .menu-login {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: opacity 1s ease;
+
+        .background {
+            height: 20%;
+            width: 100%;
+            position: absolute;
+            background: linear-gradient(to top, #2727279f, #00000000);
+        }
+
+        .menu-description {
+            height: 20%;
+            width: 100%;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+
+            .description {
+                padding-bottom: 1vmin;
+                padding-left: 1vw;
+                text-align: left;
+                width: 30%;
+                float: left;
+
+                p {
+                    color: #232323e2;
+                    font-size: 0.4rem;
+                }
+            }
+
+        }
+
+        .ClickMe {
+            padding: 0% 0%;
+            margin: 0% 0%;
+            pointer-events: all;
+            height: 7vmin;
+            width: 7vmin;
+            right: 4%;
+            bottom: 6%;
+            position: absolute;
+            float: right;
+            background-image: url("/Genshin/ClickMe.png");
+            background-size: 100% 100%;
+            background-color: #00000000;
+            border: none;
+            transition: all 0.2s;
+            outline: none;
+            cursor: url('/Genshin/T_Mouse.png'), default;
+        }
+
+        .ClickMe:hover {
+            transform: scale(1.1);
+        }
+
+        .ClickMe:active {
+            transform: scale(0.9);
+            transition: all 0.1s;
+        }
+
+        .continue::-moz-focus-inner {
+            border: none;
+        }
+    }
+
+    .menu-doorCreate-content {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-direction: column-reverse;
+        transition: opacity 0.5s ease;
+
+        .menu-doorCreate {
+            left: 2%;
+            bottom: 4vmin;
+            height: 4.5vmin;
+            width: 96%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.482) 50%, rgba(0, 0, 0, 0) 100%);
+            animation: doorCreate-background 0.5s ease-in-out forwards;
+
+            .entry {
+                height: 2.5vmin;
+                width: 11.25vmin;
+                background-image: url("/Genshin/Entry.png");
+                background-size: 100% 100%;
+                animation: doorCreate-entry 0.8s ease-in-out forwards;
+            }
+        }
+    }
+
+
+}
+
+@keyframes doorCreate-background {
+    0% {
+        opacity: 0;
+        transform: scaleY(0.1);
+    }
+
+    10% {
+        opacity: 1;
+        transform: scaleY(0.1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes doorCreate-entry {
+    0% {
+        opacity: 0;
+    }
+
+    62.5% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
