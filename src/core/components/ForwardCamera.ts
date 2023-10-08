@@ -2,6 +2,7 @@ import { Component, TWEEN, Vector3 } from "../../libs/xviewer";
 
 export const cameraCenter = new Vector3()
 
+let __delta = new Vector3();
 export class ForwardCamera extends Component {
     public speed = new Vector3(0, 0, -88)
     private shouldStop = false;
@@ -13,7 +14,7 @@ export class ForwardCamera extends Component {
     }
     update(dt: number): void {
         if (!this.shouldStop) {
-            cameraCenter.add(this.speed.clone().multiplyScalar(dt));
+            cameraCenter.add(__delta.copy(this.speed).multiplyScalar(dt));
             this.viewer.camera.position.copy(cameraCenter)
         }
     }

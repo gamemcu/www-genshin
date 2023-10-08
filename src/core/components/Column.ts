@@ -44,7 +44,6 @@ export class Column extends Component {
         }
         //根据所得的名称加载glb
         for (let i of this.columeInstanceMap.keys()) {
-            console.log("lllll", i);
             this.viewer.load({ url: "Genshin/Login/" + i + ".glb" }).then((v) => {
                 let columeInstance = this.columeInstanceMap.get(i);
                 //将mesh创建出实例组

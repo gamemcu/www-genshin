@@ -6,29 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no" />
   <meta name="description" content="An online genshin loading demo, created by TEAM.x.y.z. team." />
   <title>原神启动</title>
-  <script>
-    (function (w, d, s, q, i) {
-      w[q] = w[q] || [];
-      var f = d.getElementsByTagName(s)[0], j = d.createElement(s);
-      j.async = true;
-      j.id = 'beacon-aplus';
-      j.src = 'https://d.alicdn.com/alilog/mlog/aplus/' + i + '.js';
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'aplus_queue', '203467608');
-
-    //集成应用的appKey
-    aplus_queue.push({
-      action: 'aplus.setMetaInfo',
-      arguments: ['appKey', '6502638e58a9eb5b0adbbd2e']
-    });
-    /************************以下内容为可选配置内容****************************/
-    //是否开启调试模式 
-    aplus_queue.push({
-      action: 'aplus.setMetaInfo',
-      arguments: ['DEBUG', false]
-    });
-    /******************************************************************/
-  </script>
 </head>
 <body>
   <div id="root"></div>

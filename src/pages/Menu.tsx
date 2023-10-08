@@ -36,12 +36,6 @@ export function Menu() {
           </div>
         </div>
         <button className="ClickMe" onClick={login ? () => {
-          window["aplus_queue"].push({
-            action: 'aplus.record',
-            arguments: ['openDoor', 'CLK', {
-              value: 1,
-            }]
-          });
           gameManager.emit("button-start-click");
           gameManager.emit("start")
           setLogin(false)
@@ -50,12 +44,6 @@ export function Menu() {
           bottom: "16%",
           backgroundImage: `url("/Genshin/jump.png")`
         }} onClick={login ? () => {
-          window["aplus_queue"].push({
-            action: 'aplus.record',
-            arguments: ['flyBird', 'CLK', {
-              value: 1,
-            }]
-          });
           window.open('https://www.bilibili.com/video/BV1E8411v7xy');
         } : () => { }}></button>
       </div>
